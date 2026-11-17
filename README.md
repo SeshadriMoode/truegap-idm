@@ -22,4 +22,4 @@ python -m idm_truegap.openacc
 
 The parameter set of the controlled experiments is the default in `idm_truegap/params.py`.
 
-The OpenACC calculation fits only the classical intelligent-driver acceleration and time gap, on runs held out before the fit. It reads `data/openacc/part7.csv`, the Ispra–Casale file. That copy is not in this folder. The file used in the manuscript is the copy at <https://github.com/theocharisap/acc_identification_pinns/blob/main/part7.csv>. The official record is OpenACC, DOI `10.2905/JRC.KMH3D00`. Place the csv at `data/openacc/part7.csv` before running `openacc`.
+The OpenACC calculation fits only the classical intelligent-driver acceleration and time gap. The odd-numbered runs are held out before the fit and do not enter the loss. It reads `data/openacc/part7.csv` from the Ispra–Casale campaign in OpenACC, DOI `10.2905/JRC.KMH3D00`: <https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/TransportExpData/JRCDBT0001/LATEST/Casale/part7.csv>. That file is not in this folder. Place the csv at `data/openacc/part7.csv` before running `openacc`.

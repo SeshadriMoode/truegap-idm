@@ -1,12 +1,11 @@
 """IDM baseline fit on one public OpenACC recording, with held-out runs.
 
-The file is the Ispra-Casale platoon part7.csv from the OpenACC release
-(JRC, DOI 10.2905/JRC.KMH3D00; Makridis, Mattas, Anesiadou and Ciuffo, 2021).
-The copy used here is the one redistributed with the public notebook
-https://github.com/theocharisap/acc_identification_pinns
-because the JRC box host did not resolve. The header identifies the
-recording: 27 October 2020, leader Rexton, follower Hyundai, ACC on,
-minimum distance setting.
+The file is part7.csv of the Ispra-Casale campaign in the OpenACC release
+(JRC, DOI 10.2905/JRC.KMH3D00; Makridis, Mattas, Anesiadou and Ciuffo, 2021):
+https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/TransportExpData/JRCDBT0001/LATEST/Casale/part7.csv
+The header identifies the recording: 27 October 2020, leader Rexton,
+follower Hyundai, ACC on, minimum distance setting. Place the csv at
+data/openacc/part7.csv before running this module.
 
 The loss is the mean squared bumper-gap error of a forward simulation,
 plus a speed penalty. Parameters are chosen on the even-numbered
@@ -282,7 +281,7 @@ def main():
     summary = {
         "source": "OpenACC Ispra-Casale part7.csv",
         "doi": "10.2905/JRC.KMH3D00",
-        "file_copy": "https://github.com/theocharisap/acc_identification_pinns/blob/main/part7.csv",
+        "file": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/TransportExpData/JRCDBT0001/LATEST/Casale/part7.csv",
         "feedforward_on_recording": "none; true-gap counterfactual uses ka = 0",
         "date": "-".join(header["date"]),
         "leader": header["vehicles"][0],
